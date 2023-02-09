@@ -37,10 +37,6 @@ class App extends Component {
       dcom,
      } )
   }
-
-
-
-
   aPluse =()=> {
     let {acom}=this.state
     acom++
@@ -100,14 +96,14 @@ class App extends Component {
   render() {
     const{acom,bcom,ccom,dcom}= this.state
     return (
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center' , flexDirection: 'column' , height: '80vh', width:'60%', margin: '10vh 20%', gap: '30px' , border: '1px solid black'}} >
+      <div style={{display: 'flex', justifyContent: 'center', borderRadius:'10%' , alignItems: 'center' , flexDirection: 'column' , height: '80vh', width:'60%', margin: '10vh 20%', gap: '30px' , backgroundColor:'' , border: '5px solid blue'}} >
         <div>
-          <button onClick={this.allplusebtn} >+</button>
-          <button onClick={this.allminusebtn}>-</button>
+          <button style={{width:'50px',height:'30px'}} onClick={this.allplusebtn} >+</button>
+          <button style={{width:'50px',height:'30px'}} onClick={this.allminusebtn}>-</button>
         </div >
         <div style={{display: 'flex', justifyContent: 'center',alignItems: 'center', gap: '50px'}}>
-        <div style={{width:'300px',height: '400px', border: '1px solid black' }}><FirstCom acom={acom} bcom={bcom} aPluse={this.aPluse} aMinuse={this.aMinuse} bPluse={this.bPluse} bMinuse={this.bMinuse} /></div>
-        <div style={{width:'300px',height: '400px', border: '1px solid black' }}> <SecoundCom ccom={ccom} dcom={dcom}  cPluse={this.cPluse}  cMinuse={this.cMinuse} dPluse={this.dPluse}  dMinuse={this.dMinuse} /> </div>
+        <div style={{width:'300px',height: '400px', borderRadius:'10%' , border: '3px solid green' }}><FirstCom acom={acom} bcom={bcom} aPluse={this.aPluse} aMinuse={this.aMinuse} bPluse={this.bPluse} bMinuse={this.bMinuse} /></div>
+        <div style={{width:'300px',height: '400px',borderRadius:'10%', border: '3px solid green' }}> <SecoundCom ccom={ccom} dcom={dcom}  cPluse={this.cPluse}  cMinuse={this.cMinuse} dPluse={this.dPluse}  dMinuse={this.dMinuse} /> </div>
         </div>
       </div>
     );
